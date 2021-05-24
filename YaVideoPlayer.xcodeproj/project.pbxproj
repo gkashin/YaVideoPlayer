@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B33C265C0378005F683C /* AppDelegate.swift */; };
+		5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B33E265C0378005F683C /* SceneDelegate.swift */; };
+		5BA6B341265C0378005F683C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B340265C0378005F683C /* ViewController.swift */; };
+		5BA6B344265C0378005F683C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B342265C0378005F683C /* Main.storyboard */; };
+		5BA6B346265C037B005F683C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B345265C037B005F683C /* Assets.xcassets */; };
+		5BA6B349265C037B005F683C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B347265C037B005F683C /* LaunchScreen.storyboard */; };
+		5BA6B354265C037C005F683C /* YaVideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B353265C037C005F683C /* YaVideoPlayerTests.swift */; };
+		5BA6B35F265C037C005F683C /* YaVideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B35E265C037C005F683C /* YaVideoPlayerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BA6B350265C037C005F683C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BA6B331265C0378005F683C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA6B338265C0378005F683C;
+			remoteInfo = YaVideoPlayer;
+		};
+		5BA6B35B265C037C005F683C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BA6B331265C0378005F683C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA6B338265C0378005F683C;
+			remoteInfo = YaVideoPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BA6B339265C0378005F683C /* YaVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA6B33C265C0378005F683C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BA6B33E265C0378005F683C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5BA6B340265C0378005F683C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BA6B343265C0378005F683C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BA6B345265C037B005F683C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BA6B348265C037B005F683C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BA6B34A265C037B005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA6B34F265C037C005F683C /* YaVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA6B353265C037C005F683C /* YaVideoPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaVideoPlayerTests.swift; sourceTree = "<group>"; };
+		5BA6B355265C037C005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA6B35A265C037C005F683C /* YaVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA6B35E265C037C005F683C /* YaVideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaVideoPlayerUITests.swift; sourceTree = "<group>"; };
+		5BA6B360265C037C005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BA6B336265C0378005F683C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA6B34C265C037C005F683C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA6B357265C037C005F683C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BA6B330265C0378005F683C = {
+			isa = PBXGroup;
+			children = (
+				5BA6B33B265C0378005F683C /* YaVideoPlayer */,
+				5BA6B352265C037C005F683C /* YaVideoPlayerTests */,
+				5BA6B35D265C037C005F683C /* YaVideoPlayerUITests */,
+				5BA6B33A265C0378005F683C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BA6B33A265C0378005F683C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B339265C0378005F683C /* YaVideoPlayer.app */,
+				5BA6B34F265C037C005F683C /* YaVideoPlayerTests.xctest */,
+				5BA6B35A265C037C005F683C /* YaVideoPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BA6B33B265C0378005F683C /* YaVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B33C265C0378005F683C /* AppDelegate.swift */,
+				5BA6B33E265C0378005F683C /* SceneDelegate.swift */,
+				5BA6B340265C0378005F683C /* ViewController.swift */,
+				5BA6B342265C0378005F683C /* Main.storyboard */,
+				5BA6B345265C037B005F683C /* Assets.xcassets */,
+				5BA6B347265C037B005F683C /* LaunchScreen.storyboard */,
+				5BA6B34A265C037B005F683C /* Info.plist */,
+			);
+			path = YaVideoPlayer;
+			sourceTree = "<group>";
+		};
+		5BA6B352265C037C005F683C /* YaVideoPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B353265C037C005F683C /* YaVideoPlayerTests.swift */,
+				5BA6B355265C037C005F683C /* Info.plist */,
+			);
+			path = YaVideoPlayerTests;
+			sourceTree = "<group>";
+		};
+		5BA6B35D265C037C005F683C /* YaVideoPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B35E265C037C005F683C /* YaVideoPlayerUITests.swift */,
+				5BA6B360265C037C005F683C /* Info.plist */,
+			);
+			path = YaVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BA6B338265C0378005F683C /* YaVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA6B363265C037C005F683C /* Build configuration list for PBXNativeTarget "YaVideoPlayer" */;
+			buildPhases = (
+				5BA6B335265C0378005F683C /* Sources */,
+				5BA6B336265C0378005F683C /* Frameworks */,
+				5BA6B337265C0378005F683C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YaVideoPlayer;
+			productName = YaVideoPlayer;
+			productReference = 5BA6B339265C0378005F683C /* YaVideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BA6B34E265C037C005F683C /* YaVideoPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA6B366265C037C005F683C /* Build configuration list for PBXNativeTarget "YaVideoPlayerTests" */;
+			buildPhases = (
+				5BA6B34B265C037C005F683C /* Sources */,
+				5BA6B34C265C037C005F683C /* Frameworks */,
+				5BA6B34D265C037C005F683C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BA6B351265C037C005F683C /* PBXTargetDependency */,
+			);
+			name = YaVideoPlayerTests;
+			productName = YaVideoPlayerTests;
+			productReference = 5BA6B34F265C037C005F683C /* YaVideoPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BA6B359265C037C005F683C /* YaVideoPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA6B369265C037C005F683C /* Build configuration list for PBXNativeTarget "YaVideoPlayerUITests" */;
+			buildPhases = (
+				5BA6B356265C037C005F683C /* Sources */,
+				5BA6B357265C037C005F683C /* Frameworks */,
+				5BA6B358265C037C005F683C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BA6B35C265C037C005F683C /* PBXTargetDependency */,
+			);
+			name = YaVideoPlayerUITests;
+			productName = YaVideoPlayerUITests;
+			productReference = 5BA6B35A265C037C005F683C /* YaVideoPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BA6B331265C0378005F683C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					5BA6B338265C0378005F683C = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					5BA6B34E265C037C005F683C = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 5BA6B338265C0378005F683C;
+					};
+					5BA6B359265C037C005F683C = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 5BA6B338265C0378005F683C;
+					};
+				};
+			};
+			buildConfigurationList = 5BA6B334265C0378005F683C /* Build configuration list for PBXProject "YaVideoPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BA6B330265C0378005F683C;
+			productRefGroup = 5BA6B33A265C0378005F683C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BA6B338265C0378005F683C /* YaVideoPlayer */,
+				5BA6B34E265C037C005F683C /* YaVideoPlayerTests */,
+				5BA6B359265C037C005F683C /* YaVideoPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BA6B337265C0378005F683C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA6B349265C037B005F683C /* LaunchScreen.storyboard in Resources */,
+				5BA6B346265C037B005F683C /* Assets.xcassets in Resources */,
+				5BA6B344265C0378005F683C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA6B34D265C037C005F683C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA6B358265C037C005F683C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BA6B335265C0378005F683C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA6B341265C0378005F683C /* ViewController.swift in Sources */,
+				5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */,
+				5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA6B34B265C037C005F683C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA6B354265C037C005F683C /* YaVideoPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA6B356265C037C005F683C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA6B35F265C037C005F683C /* YaVideoPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BA6B351265C037C005F683C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA6B338265C0378005F683C /* YaVideoPlayer */;
+			targetProxy = 5BA6B350265C037C005F683C /* PBXContainerItemProxy */;
+		};
+		5BA6B35C265C037C005F683C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA6B338265C0378005F683C /* YaVideoPlayer */;
+			targetProxy = 5BA6B35B265C037C005F683C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BA6B342265C0378005F683C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA6B343265C0378005F683C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BA6B347265C037B005F683C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA6B348265C037B005F683C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BA6B361265C037C005F683C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BA6B362265C037C005F683C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BA6B364265C037C005F683C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A856J95H;
+				INFOPLIST_FILE = YaVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BA6B365265C037C005F683C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A856J95H;
+				INFOPLIST_FILE = YaVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5BA6B367265C037C005F683C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A856J95H;
+				INFOPLIST_FILE = YaVideoPlayerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YaVideoPlayer.app/YaVideoPlayer";
+			};
+			name = Debug;
+		};
+		5BA6B368265C037C005F683C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A856J95H;
+				INFOPLIST_FILE = YaVideoPlayerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YaVideoPlayer.app/YaVideoPlayer";
+			};
+			name = Release;
+		};
+		5BA6B36A265C037C005F683C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A856J95H;
+				INFOPLIST_FILE = YaVideoPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YaVideoPlayer;
+			};
+			name = Debug;
+		};
+		5BA6B36B265C037C005F683C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A856J95H;
+				INFOPLIST_FILE = YaVideoPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YaVideoPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BA6B334265C0378005F683C /* Build configuration list for PBXProject "YaVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA6B361265C037C005F683C /* Debug */,
+				5BA6B362265C037C005F683C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA6B363265C037C005F683C /* Build configuration list for PBXNativeTarget "YaVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA6B364265C037C005F683C /* Debug */,
+				5BA6B365265C037C005F683C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA6B366265C037C005F683C /* Build configuration list for PBXNativeTarget "YaVideoPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA6B367265C037C005F683C /* Debug */,
+				5BA6B368265C037C005F683C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA6B369265C037C005F683C /* Build configuration list for PBXNativeTarget "YaVideoPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA6B36A265C037C005F683C /* Debug */,
+				5BA6B36B265C037C005F683C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BA6B331265C0378005F683C /* Project object */;
+}
