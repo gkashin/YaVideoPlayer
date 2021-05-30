@@ -5,39 +5,37 @@
 //  Created by Георгий Кашин on 30.05.2021.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
-class VideoView: UIView {
+final class VideoView: UIView {
     
-    // MARK: Stored Properties
-    private let playButton = UIButton(titleColor: .white, imageName: "play")
-    private let fifteenSecondsForwardButton = UIButton(titleColor: .white, imageName: "goforward.15")
-    private let fifteenSecondsBackwardButton = UIButton(titleColor: .white, imageName: "gobackward.15")
-    
+    // MARK: Stored Properties    
+    private let controlPanelView: ControlPanelView!
     private var playerLayer: AVPlayerLayer!
-    
-    private var playAction: ((_ sender: UIButton) -> Void)
-    private var fifteenSecondsForwardAction: (() -> Void)
-    private var fifteenSecondsBackwardAction: (() -> Void)
     
     
     // MARK: Initializers
-    init(player: AVPlayer,
-         playAction: @escaping (_ sender: UIButton) -> Void,
-         fifteenSecondsForwardAction: @escaping () -> Void,
-         fifteenSecondsBackwardAction: @escaping () -> Void
+    init(
+        player: AVPlayer,
+        playAction: @escaping (_ sender: UIButton) -> Void,
+        fifteenSecondsForwardAction: @escaping () -> Void,
+        fifteenSecondsBackwardAction: @escaping () -> Void,
+        timeSliderAction: @escaping (_ sender: UISlider) -> Void
     ) {
-        self.playAction = playAction
-        self.fifteenSecondsForwardAction = fifteenSecondsForwardAction
-        self.fifteenSecondsBackwardAction = fifteenSecondsBackwardAction
+        controlPanelView = ControlPanelView(
+            playAction: playAction,
+            fifteenSecondsForwardAction: fifteenSecondsForwardAction,
+            fifteenSecondsBackwardAction: fifteenSecondsBackwardAction,
+            timeSliderAction: timeSliderAction
+        )
         
         super.init(frame: .zero)
         playerLayer = AVPlayerLayer(player: player)
         layer.addSublayer(playerLayer)
         playerLayer.videoGravity = .resize
         
-        setupButtons()
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
@@ -53,39 +51,34 @@ class VideoView: UIView {
     }
 }
 
-// MARK: - Private Methods
-// MARK: Actions
-private extension VideoView {
-    @objc func playButtonTapped(_ sender: UIButton) {
-        playAction(sender)
+// MARK: - Public Methods
+// MARK: UI
+extension VideoView {
+    func updateTimeLabelsAndSlider(currentTime: CMTime, leftTime: CMTime) {
+        controlPanelView.updateTimeLabelsAndSlider(currentTime: currentTime, leftTime: leftTime)
     }
     
-    @objc func fifteenSecondsForwardButtonTapped() {
-        fifteenSecondsForwardAction()
-    }
-    
-    @objc func fifteenSecondsBackwardButtonTapped() {
-        fifteenSecondsBackwardAction()
+    func setSliderDuration(duration: CMTime) {
+        controlPanelView.setSliderDuration(duration: duration)
     }
 }
 
+// MARK: - Private Methods
 // MARK: UI
-private extension VideoView {
-    func setupButtons() {
-        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
-        fifteenSecondsForwardButton.addTarget(self, action: #selector(fifteenSecondsForwardButtonTapped), for: .touchUpInside)
-        fifteenSecondsBackwardButton.addTarget(self, action: #selector(fifteenSecondsBackwardButtonTapped), for: .touchUpInside)
-        
-        let stackView = UIStackView(arrangedSubviews: [fifteenSecondsBackwardButton, playButton, fifteenSecondsForwardButton])
-        stackView.axis = .horizontal
-        stackView.spacing = 20
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stackView)
+extension VideoView {
+    private func setupUI() {
+        setupControlPanelView()
+    }
+    
+    private func setupControlPanelView() {
+        controlPanelView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(controlPanelView)
         
         NSLayoutConstraint.activate([
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-            stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            controlPanelView.heightAnchor.constraint(equalToConstant: 40),
+            controlPanelView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            controlPanelView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            controlPanelView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
 }

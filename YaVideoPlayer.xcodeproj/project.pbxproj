@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B33C265C0378005F683C /* AppDelegate.swift */; };
 		5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B33E265C0378005F683C /* SceneDelegate.swift */; };
-		5BA6B341265C0378005F683C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B340265C0378005F683C /* ViewController.swift */; };
+		5BA6B341265C0378005F683C /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B340265C0378005F683C /* VideoPlayerViewController.swift */; };
 		5BA6B346265C037B005F683C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B345265C037B005F683C /* Assets.xcassets */; };
 		5BA6B354265C037C005F683C /* YaVideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B353265C037C005F683C /* YaVideoPlayerTests.swift */; };
 		5BA6B35F265C037C005F683C /* YaVideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B35E265C037C005F683C /* YaVideoPlayerUITests.swift */; };
 		5BAC18232663CED200F5C183 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18222663CED200F5C183 /* UIButton+Extension.swift */; };
 		5BAC18282663CF9400F5C183 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18272663CF9400F5C183 /* VideoView.swift */; };
+		5BAC18302663E80400F5C183 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC182F2663E80400F5C183 /* ControlPanelView.swift */; };
+		5BAC18382663F0EA00F5C183 /* CMTime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */; };
+		5BAC183D2663FF4000F5C183 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		5BA6B339265C0378005F683C /* YaVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA6B33C265C0378005F683C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA6B33E265C0378005F683C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BA6B340265C0378005F683C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BA6B340265C0378005F683C /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		5BA6B345265C037B005F683C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BA6B34A265C037B005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BA6B34F265C037C005F683C /* YaVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +52,9 @@
 		5BA6B360265C037C005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BAC18222663CED200F5C183 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		5BAC18272663CF9400F5C183 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		5BAC182F2663E80400F5C183 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime+Extension.swift"; sourceTree = "<group>"; };
+		5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +107,14 @@
 			children = (
 				5BA6B33C265C0378005F683C /* AppDelegate.swift */,
 				5BA6B33E265C0378005F683C /* SceneDelegate.swift */,
-				5BA6B340265C0378005F683C /* ViewController.swift */,
+				5BA6B340265C0378005F683C /* VideoPlayerViewController.swift */,
+				5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */,
 				5BAC18222663CED200F5C183 /* UIButton+Extension.swift */,
 				5BA6B345265C037B005F683C /* Assets.xcassets */,
 				5BA6B34A265C037B005F683C /* Info.plist */,
 				5BAC18272663CF9400F5C183 /* VideoView.swift */,
+				5BAC182F2663E80400F5C183 /* ControlPanelView.swift */,
+				5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */,
 			);
 			path = YaVideoPlayer;
 			sourceTree = "<group>";
@@ -256,9 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BA6B341265C0378005F683C /* ViewController.swift in Sources */,
+				5BAC183D2663FF4000F5C183 /* UILabel+Extension.swift in Sources */,
+				5BAC18382663F0EA00F5C183 /* CMTime+Extension.swift in Sources */,
+				5BA6B341265C0378005F683C /* VideoPlayerViewController.swift in Sources */,
 				5BAC18282663CF9400F5C183 /* VideoView.swift in Sources */,
 				5BAC18232663CED200F5C183 /* UIButton+Extension.swift in Sources */,
+				5BAC18302663E80400F5C183 /* ControlPanelView.swift in Sources */,
 				5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */,
 				5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */,
 			);

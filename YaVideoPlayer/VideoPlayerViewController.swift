@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  VideoPlayerViewController.swift
 //  YaVideoPlayer
 //
 //  Created by Георгий Кашин on 24.05.2021.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
-class VideoPlayerViewController: UIViewController {
+final class VideoPlayerViewController: UIViewController {
     
     // MARK: Stored Properties
     private var videoView: VideoView!
@@ -23,20 +23,25 @@ class VideoPlayerViewController: UIViewController {
         
         let url = URL(string: "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")!
         player = AVPlayer(url: url)
+        player.currentItem?.addObserver(self, forKeyPath: "duration", options: [.new, .initial], context: nil)
+        addTimeObserver()
         
         videoView = VideoView(
             player: player,
             playAction: playAction,
             fifteenSecondsForwardAction: fifteenSecondsForwardAction,
-            fifteenSecondsBackwardAction: fifteenSecondsBackwardAction
+            fifteenSecondsBackwardAction: fifteenSecondsBackwardAction,
+            timeSliderAction: timeSliderAction
         )
-        
+
         setupUI()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "duration", let duration = player.currentItem?.duration.seconds, duration > 0 {
+            let duration = player.currentItem!.duration
+            videoView.setSliderDuration(duration: duration)
+        }
     }
 }
 
@@ -47,13 +52,12 @@ private extension VideoPlayerViewController {
         print(#line, #function)
         if isVideoPlaying {
             player.pause()
-            isVideoPlaying = false
-            sender.setImage(UIImage(systemName: "pause"), for: .normal)
+            sender.setImage(UIImage(systemName: "play"), for: .normal)
         } else {
             player.play()
-            isVideoPlaying = true
-            sender.setImage(UIImage(systemName: "play"), for: .normal)
+            sender.setImage(UIImage(systemName: "pause"), for: .normal)
         }
+        isVideoPlaying.toggle()
     }
     
     func fifteenSecondsForwardAction() {
@@ -80,6 +84,12 @@ private extension VideoPlayerViewController {
         let time = CMTimeMake(value: Int64(newTime * 1000), timescale: 1000)
         player.seek(to: time)
     }
+    
+    func timeSliderAction(_ sender: UISlider) {
+        print(#line, #function)
+        
+        player.seek(to: CMTimeMake(value: Int64(sender.value * 1000), timescale: 1000))
+    }
 }
 
 // MARK: UI
@@ -101,5 +111,20 @@ private extension VideoPlayerViewController {
             videoView.widthAnchor.constraint(equalTo: view.widthAnchor),
             videoView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 9 / 16),
         ])
+    }
+}
+
+// MARK: Support Methods
+private extension VideoPlayerViewController {
+    func addTimeObserver() {
+        let interval = CMTime(seconds: 0.5, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        let mainQueue = DispatchQueue.main
+        _ = player.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue, using: { [weak self] time in
+            guard let currentItem = self?.player.currentItem else { return }
+            let duration = currentItem.duration
+            let currentTime = currentItem.currentTime()
+            let leftTime = duration - currentTime
+            self?.videoView.updateTimeLabelsAndSlider(currentTime: currentTime, leftTime: leftTime)
+        })
     }
 }
