@@ -13,6 +13,8 @@ class VideoPlayerViewController: UIViewController {
     // MARK: Stored Properties
     private var videoView: VideoView!
     private var player: AVPlayer!
+    
+    private var isVideoPlaying = false
 
     
     // MARK: UIViewControllerMethods
@@ -32,11 +34,6 @@ class VideoPlayerViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        player.play()
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -46,16 +43,42 @@ class VideoPlayerViewController: UIViewController {
 // MARK: - Private Methods
 // MARK: Actions
 private extension VideoPlayerViewController {
-    func playAction() {
+    func playAction(_ sender: UIButton) {
         print(#line, #function)
+        if isVideoPlaying {
+            player.pause()
+            isVideoPlaying = false
+            sender.setImage(UIImage(systemName: "pause"), for: .normal)
+        } else {
+            player.play()
+            isVideoPlaying = true
+            sender.setImage(UIImage(systemName: "play"), for: .normal)
+        }
     }
     
     func fifteenSecondsForwardAction() {
         print(#line, #function)
+        guard let duration = player.currentItem?.duration else { return }
+        let currentTime = CMTimeGetSeconds(player.currentTime())
+        let newTime = currentTime + 15.0
+        
+        if newTime < (CMTimeGetSeconds(duration) - 15.0) {
+            let time = CMTimeMake(value: Int64(newTime * 1000), timescale: 1000)
+            player.seek(to: time)
+        }
     }
     
     func fifteenSecondsBackwardAction() {
         print(#line, #function)
+        
+        let currentTime = CMTimeGetSeconds(player.currentTime())
+        var newTime = currentTime - 15.0
+        
+        if newTime < 0 {
+            newTime = 0
+        }
+        let time = CMTimeMake(value: Int64(newTime * 1000), timescale: 1000)
+        player.seek(to: time)
     }
 }
 

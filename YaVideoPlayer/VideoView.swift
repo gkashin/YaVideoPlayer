@@ -11,20 +11,20 @@ import AVFoundation
 class VideoView: UIView {
     
     // MARK: Stored Properties
-    private let playButton = UIButton(title: "play", titleColor: .white)
-    private let fifteenSecondsForwardButton = UIButton(title: "forward", titleColor: .white)
-    private let fifteenSecondsBackwardButton = UIButton(title: "back", titleColor: .white)
+    private let playButton = UIButton(titleColor: .white, imageName: "play")
+    private let fifteenSecondsForwardButton = UIButton(titleColor: .white, imageName: "goforward.15")
+    private let fifteenSecondsBackwardButton = UIButton(titleColor: .white, imageName: "gobackward.15")
     
     private var playerLayer: AVPlayerLayer!
     
-    private var playAction: (() -> Void)
+    private var playAction: ((_ sender: UIButton) -> Void)
     private var fifteenSecondsForwardAction: (() -> Void)
     private var fifteenSecondsBackwardAction: (() -> Void)
     
     
     // MARK: Initializers
     init(player: AVPlayer,
-         playAction: @escaping () -> Void,
+         playAction: @escaping (_ sender: UIButton) -> Void,
          fifteenSecondsForwardAction: @escaping () -> Void,
          fifteenSecondsBackwardAction: @escaping () -> Void
     ) {
@@ -56,8 +56,8 @@ class VideoView: UIView {
 // MARK: - Private Methods
 // MARK: Actions
 private extension VideoView {
-    @objc func playButtonTapped() {
-        playAction()
+    @objc func playButtonTapped(_ sender: UIButton) {
+        playAction(sender)
     }
     
     @objc func fifteenSecondsForwardButtonTapped() {
