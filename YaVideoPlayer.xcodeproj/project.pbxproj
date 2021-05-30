@@ -10,11 +10,11 @@
 		5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B33C265C0378005F683C /* AppDelegate.swift */; };
 		5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B33E265C0378005F683C /* SceneDelegate.swift */; };
 		5BA6B341265C0378005F683C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B340265C0378005F683C /* ViewController.swift */; };
-		5BA6B344265C0378005F683C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B342265C0378005F683C /* Main.storyboard */; };
 		5BA6B346265C037B005F683C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B345265C037B005F683C /* Assets.xcassets */; };
-		5BA6B349265C037B005F683C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6B347265C037B005F683C /* LaunchScreen.storyboard */; };
 		5BA6B354265C037C005F683C /* YaVideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B353265C037C005F683C /* YaVideoPlayerTests.swift */; };
 		5BA6B35F265C037C005F683C /* YaVideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6B35E265C037C005F683C /* YaVideoPlayerUITests.swift */; };
+		5BAC18232663CED200F5C183 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18222663CED200F5C183 /* UIButton+Extension.swift */; };
+		5BAC18282663CF9400F5C183 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18272663CF9400F5C183 /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,7 @@
 		5BA6B33C265C0378005F683C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA6B33E265C0378005F683C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5BA6B340265C0378005F683C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BA6B343265C0378005F683C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BA6B345265C037B005F683C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BA6B348265C037B005F683C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BA6B34A265C037B005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BA6B34F265C037C005F683C /* YaVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA6B353265C037C005F683C /* YaVideoPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaVideoPlayerTests.swift; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		5BA6B35A265C037C005F683C /* YaVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA6B35E265C037C005F683C /* YaVideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaVideoPlayerUITests.swift; sourceTree = "<group>"; };
 		5BA6B360265C037C005F683C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAC18222663CED200F5C183 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		5BAC18272663CF9400F5C183 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +102,10 @@
 				5BA6B33C265C0378005F683C /* AppDelegate.swift */,
 				5BA6B33E265C0378005F683C /* SceneDelegate.swift */,
 				5BA6B340265C0378005F683C /* ViewController.swift */,
-				5BA6B342265C0378005F683C /* Main.storyboard */,
+				5BAC18222663CED200F5C183 /* UIButton+Extension.swift */,
 				5BA6B345265C037B005F683C /* Assets.xcassets */,
-				5BA6B347265C037B005F683C /* LaunchScreen.storyboard */,
 				5BA6B34A265C037B005F683C /* Info.plist */,
+				5BAC18272663CF9400F5C183 /* VideoView.swift */,
 			);
 			path = YaVideoPlayer;
 			sourceTree = "<group>";
@@ -231,9 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BA6B349265C037B005F683C /* LaunchScreen.storyboard in Resources */,
 				5BA6B346265C037B005F683C /* Assets.xcassets in Resources */,
-				5BA6B344265C0378005F683C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BA6B341265C0378005F683C /* ViewController.swift in Sources */,
+				5BAC18282663CF9400F5C183 /* VideoView.swift in Sources */,
+				5BAC18232663CED200F5C183 /* UIButton+Extension.swift in Sources */,
 				5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */,
 				5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */,
 			);
@@ -294,25 +294,6 @@
 			targetProxy = 5BA6B35B265C037C005F683C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5BA6B342265C0378005F683C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BA6B343265C0378005F683C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BA6B347265C037B005F683C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BA6B348265C037B005F683C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5BA6B361265C037C005F683C /* Debug */ = {
@@ -439,6 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73A856J95H;
 				INFOPLIST_FILE = YaVideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73A856J95H;
 				INFOPLIST_FILE = YaVideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.gkashin.YaVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
