@@ -11,8 +11,8 @@ import UIKit
 final class ControlPanelView: UIView {
     
     private let playButton = UIButton(titleColor: .white, imageName: "play")
-    private let fifteenSecondsForwardButton = UIButton(titleColor: .white, imageName: "goforward.15")
-    private let fifteenSecondsBackwardButton = UIButton(titleColor: .white, imageName: "gobackward.15")
+    private let fifteenSecondsForwardButton = UIButton(imageName: "goforward.15")
+    private let fifteenSecondsBackwardButton = UIButton(imageName: "gobackward.15")
     
     private let timeSlider = UISlider()
     
@@ -23,6 +23,7 @@ final class ControlPanelView: UIView {
     private var fifteenSecondsForwardAction: (() -> Void)
     private var fifteenSecondsBackwardAction: (() -> Void)
     private var timeSliderAction: ((_ sender: UISlider) -> Void)
+
     
     init(
         playAction: @escaping (_ sender: UIButton) -> Void,
@@ -83,7 +84,7 @@ private extension ControlPanelView {
 private extension ControlPanelView {
     func setupUI() {
         backgroundColor = .lightGray
-        layer.cornerRadius = 10
+        layer.cornerRadius = 15
 
         setupControls()
     }

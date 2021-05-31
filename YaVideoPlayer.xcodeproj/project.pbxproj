@@ -18,6 +18,10 @@
 		5BAC18302663E80400F5C183 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC182F2663E80400F5C183 /* ControlPanelView.swift */; };
 		5BAC18382663F0EA00F5C183 /* CMTime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */; };
 		5BAC183D2663FF4000F5C183 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */; };
+		5BAC18422664040200F5C183 /* SoundControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC18412664040200F5C183 /* SoundControlView.swift */; };
+		5BAC184A26656B7200F5C183 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC184926656B7200F5C183 /* UIViewController+Extension.swift */; };
+		5BAC184F26656B8C00F5C183 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC184E26656B8C00F5C183 /* Errors.swift */; };
+		5BAC185726656D3C00F5C183 /* InputURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC185626656D3C00F5C183 /* InputURLView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		5BAC182F2663E80400F5C183 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
 		5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime+Extension.swift"; sourceTree = "<group>"; };
 		5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		5BAC18412664040200F5C183 /* SoundControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundControlView.swift; sourceTree = "<group>"; };
+		5BAC184926656B7200F5C183 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5BAC184E26656B8C00F5C183 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		5BAC185626656D3C00F5C183 /* InputURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputURLView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +113,12 @@
 		5BA6B33B265C0378005F683C /* YaVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				5BA6B33C265C0378005F683C /* AppDelegate.swift */,
-				5BA6B33E265C0378005F683C /* SceneDelegate.swift */,
-				5BA6B340265C0378005F683C /* VideoPlayerViewController.swift */,
-				5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */,
-				5BAC18222663CED200F5C183 /* UIButton+Extension.swift */,
-				5BA6B345265C037B005F683C /* Assets.xcassets */,
-				5BA6B34A265C037B005F683C /* Info.plist */,
-				5BAC18272663CF9400F5C183 /* VideoView.swift */,
-				5BAC182F2663E80400F5C183 /* ControlPanelView.swift */,
-				5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */,
+				5BF6897B26658373003B240B /* App */,
+				5BF689792665835E003B240B /* Controllers */,
+				5BF6897A2665836B003B240B /* Views */,
+				5BF6897F2665837A003B240B /* Extensions */,
+				5BF6898426658388003B240B /* Resources */,
+				5BF6898026658384003B240B /* Models */,
 			);
 			path = YaVideoPlayer;
 			sourceTree = "<group>";
@@ -135,6 +139,62 @@
 				5BA6B360265C037C005F683C /* Info.plist */,
 			);
 			path = YaVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+		5BF689792665835E003B240B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B340265C0378005F683C /* VideoPlayerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BF6897A2665836B003B240B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BAC185626656D3C00F5C183 /* InputURLView.swift */,
+				5BAC182F2663E80400F5C183 /* ControlPanelView.swift */,
+				5BAC18412664040200F5C183 /* SoundControlView.swift */,
+				5BAC18272663CF9400F5C183 /* VideoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BF6897B26658373003B240B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B33C265C0378005F683C /* AppDelegate.swift */,
+				5BA6B33E265C0378005F683C /* SceneDelegate.swift */,
+				5BA6B34A265C037B005F683C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5BF6897F2665837A003B240B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BAC18372663F0EA00F5C183 /* CMTime+Extension.swift */,
+				5BAC18222663CED200F5C183 /* UIButton+Extension.swift */,
+				5BAC183C2663FF4000F5C183 /* UILabel+Extension.swift */,
+				5BAC184926656B7200F5C183 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BF6898026658384003B240B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BAC184E26656B8C00F5C183 /* Errors.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BF6898426658388003B240B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6B345265C037B005F683C /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +328,14 @@
 				5BAC183D2663FF4000F5C183 /* UILabel+Extension.swift in Sources */,
 				5BAC18382663F0EA00F5C183 /* CMTime+Extension.swift in Sources */,
 				5BA6B341265C0378005F683C /* VideoPlayerViewController.swift in Sources */,
+				5BAC185726656D3C00F5C183 /* InputURLView.swift in Sources */,
+				5BAC184F26656B8C00F5C183 /* Errors.swift in Sources */,
 				5BAC18282663CF9400F5C183 /* VideoView.swift in Sources */,
 				5BAC18232663CED200F5C183 /* UIButton+Extension.swift in Sources */,
+				5BAC18422664040200F5C183 /* SoundControlView.swift in Sources */,
 				5BAC18302663E80400F5C183 /* ControlPanelView.swift in Sources */,
 				5BA6B33D265C0378005F683C /* AppDelegate.swift in Sources */,
+				5BAC184A26656B7200F5C183 /* UIViewController+Extension.swift in Sources */,
 				5BA6B33F265C0378005F683C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73A856J95H;
-				INFOPLIST_FILE = YaVideoPlayer/Info.plist;
+				INFOPLIST_FILE = YaVideoPlayer/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73A856J95H;
-				INFOPLIST_FILE = YaVideoPlayer/Info.plist;
+				INFOPLIST_FILE = YaVideoPlayer/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
